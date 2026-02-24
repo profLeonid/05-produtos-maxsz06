@@ -14,12 +14,14 @@
 
     <h1 class="text-4xl">Lista de Produtos</h1>
 
-    <input type="text" class="border rounded px-8 py-2" id="produto">
+    <input type="text" placeholder="Codigo" class="border rounded px-8 py-2" id="codigo">
+    <input type="text" placeholder="Produto" class="border rounded px-8 py-2" id="produto">
+    <input type="text" placeholder="Quantidade" class="border rounded px-8 py-2" id="quantidade">
+
 
 
 
     <button class="bg-blue-500 text-white px-4 rounded" onclick="adicionarProduto()">
-
         Adicionar
     </button>
 
@@ -29,6 +31,26 @@
     </button>
 
     <div id="lista" class="flex flex-col gap-2">
+
+        <table class="border-separate border-spacing-y-1">
+            <thead>
+              <tr class="text-left">
+                <th class="px-4 py-2">Código</th>
+                <th class="px-4 py-2">Produto</th>
+                <th class="px-4 py-2">Quantidade</th>
+              </tr>
+            </thead>
+        
+            <tbody>
+              <tr class="bg-white shadow rounded-lg">
+                <td class="px-4 py-3 rounded-l-lg"></td>
+                <td class="px-4 py-3"></td>
+                <td class="px-4 py-3 rounded-r-lg"></td>
+              </tr>
+            </tbody>
+          </table>
+       
+        
     </div>
 </body>
 
