@@ -1,12 +1,13 @@
 `use strict`
 
 function adicionarProduto(){
+
     const lista = document.getElementById(`lista`)
     const produto = document.getElementById(`produto`)
     const codigo = document.getElementById(`codigo`)
     const quantidade = document.getElementById(`quantidade`)
 
-    if(produto.value.trim()=== ""){
+    if(produto.value.trim()===""){
         alert ("Complete as caixas")
         e.preventDefault()
         return
@@ -21,9 +22,9 @@ function adicionarProduto(){
     }
 
 
-    const span = document.createElement(`span`)
-    span.textContent = produto.value, codigo.value, quantidade.value
-    span.className=`flex flex-col bg-blue-100 px-8 py-p`
+    const tableAtributos = document.getElementById(`atributos`)
+
+    
 
     lista.appendChild(span)
 }
