@@ -2,50 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./main.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Produtos</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+  <title>Produtos</title>
 </head>
 
 <body class="bg-gray-500 flex flex-col items-center justify-center h-screen gap-4">
 
-    <h1 class="text-4xl">Lista de Produtos</h1>
+  <h1 class="text-4xl">Lista de Produtos</h1>
 
-    <input type="text" placeholder="Codigo" class="border rounded px-8 py-2" id="codigo">
-    <input type="text" placeholder="Produto" class="border rounded px-8 py-2" id="produto">
-    <input type="text" placeholder="Quantidade" class="border rounded px-8 py-2" id="quantidade">
+  <input type="number" placeholder="Codigo" id="codigo"
+    class="border rounded px-8 py-2 bg-gray-100 hover:bg-gray-200 transition" />
+  <input type="text" placeholder="Produto" class="border rounded px-8 py-2 bg-gray-100 hover:bg-gray-200 transition"
+    id="produto">
+  <input type="text" placeholder="Quantidade" class="border rounded px-8 py-2 bg-gray-100 hover:bg-gray-200 transition"
+    id="quantidade">
+
+  <button class="bg-blue-500 text-white px-4 rounded" onclick="adicionarProduto()">
+    Adicionar
+  </button>
+
+  <button class="bg-blue-500 text-white px-4 rounded" onclick="removerProduto()">
+    Deletar Anterior
+  </button>
+
+  <div id="lista" class="flex flex-col gap-2">
+
+    <table id="tabela" class="border-separate border-spacing-y-1">
+      <thead>
+        <tr class="text-left">
+          <th class="px-4 py-2">Código</th>
+          <th class="px-4 py-2">Produto</th>
+          <th class="px-4 py-2">Quantidade</th>
+        </tr>
+      </thead>
+
+      <tbody id="atributos"></tbody>
+
+    </table>
 
 
-
-
-    <button class="bg-blue-500 text-white px-4 rounded" onclick="adicionarProduto()">
-        Adicionar
-    </button>
-
-    <button class="bg-blue-500 text-white px-4 rounded" onclick="removerProduto()">
-
-        Deletar Anterior
-    </button>
-
-    <div id="lista" class="flex flex-col gap-2">
-
-        <table id= "tabela"class="border-separate border-spacing-y-1">
-            <thead>
-              <tr class="text-left">
-                <th class="px-4 py-2">Código</th>
-                <th class="px-4 py-2">Produto</th>
-                <th class="px-4 py-2">Quantidade</th>
-              </tr>
-            </thead>
-        
-            <tbody id="atributos"></tbody>
-          </table>
-       
-        
-    </div>
+  </div>
 </body>
 
 </html>
